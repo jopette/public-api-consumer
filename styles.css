@@ -17,4 +17,12 @@ body {
     margin: 15px;
     width: fit-content;
     background-color:blanchedalmond;
+    text-align: center;
+}
+.card-name {
+    font-weight:lighter;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
 }

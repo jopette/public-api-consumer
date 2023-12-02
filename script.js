@@ -15,24 +15,24 @@ const cardsContainer = document.querySelector('#cards-container');
 function renderCharacters(characters) {
     characters.forEach(character => {
         const div = document.createElement('div');
+        const front = document.createElement('div');
+        const back = document.createElement('div');
         const image = document.createElement('img');
         const name = document.createElement('h3');
-        const species = document.createElement('h3');
-        const like = document.createElement('button');
+        const info = document.createElement('button');
 
     // Creates classes for selected elements
     div.classList.add('card');
     image.classList.add('card-img');
-    species.classList.add('species');
-    like.classList.add('empty');
+    name.classList.add('card-name')
+    info.classList.add('card-btn');
 
     // Put values from characters inside the elements. 'src' is added for image.
     // innerText and back ticks (``) for name and species elements. This is necessary if we want to 
     // display text next to the characters name and species.
     image.src = character.image;
-    name.innerText = `Name: ${character.name}`;
-    species.innerText = `Species: ${character.species}`;
-    like.textContent = 'like';
+    name.innerText = `${character.name}`;
+    info.textContent = 'Character info';
 
     // Appends these elements to our newly created div 
     // element and then appends that div to our ‘cardsContainer’ global variable.
@@ -40,9 +40,13 @@ function renderCharacters(characters) {
     // the div and then append the div into our ‘cardsContainer’ where our cards will now live.
     div.appendChild(image);
     div.appendChild(name);
-    div.appendChild(species);
-    div.appendChild(like);
+    div.appendChild(info);
     
     cardsContainer.appendChild(div);
+
+    info.addEventListener('click', function() {
+        div.classList.toggle('flipped');
+    });
+
     })
 }
