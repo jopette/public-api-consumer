@@ -53,3 +53,13 @@ body {
 .card.flipped {
     transform: rotateY(180deg);
 }
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    #cards-container {
+        padding: 10px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+}
