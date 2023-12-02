@@ -1,3 +1,13 @@
+:root {
+    --primary-bg-color: blanchedalmond;
+    --light-blue: #BEE5FD;
+    --dark-blue: #01B4C6;
+    --green: #97ce4c;
+    --dark-green: #15682a;
+    --pink: #F675DA;
+    --yellow: #FFF874;
+    --red: firebrick;
+}
 * {
     box-sizing: border-box;
 }
@@ -19,7 +29,7 @@ body {
     border: 1px solid black;
     margin: 15px;
     width: fit-content;
-    background-color:blanchedalmond;
+    background-color: var(--primary-bg-color);
     text-align: center;
     transform-style: preserve-3d;   /* Ensures 3D transformations are preserved */
     transition: transform 0.5s;     /* Adds a smooth transition effect to card flipping */
@@ -32,7 +42,7 @@ body {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;    /* Hides the back of the card during the flip */
-    background-color: white;
+    background-color: var(--primary-bg-color);      /* BG color for the card back*/
     transform: rotateY(180deg);     /* Initial rotation to hide the back */
 }
 /* Styles for the card name, making it lighter in weight */
