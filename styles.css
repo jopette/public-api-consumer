@@ -45,6 +45,19 @@ body {
     background-color: var(--primary-bg-color);      /* BG color for the card back*/
     transform: rotateY(180deg);     /* Initial rotation to hide the back */
 }
+/* Styles for the front and back buttons */
+.card-btn,
+.card-back-btn {
+    position: absolute;
+    bottom: 45px; /* Adjust this value to your preference */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 /* Styles for the card name, making it lighter in weight */
 .card-name {
     font-weight:lighter;
@@ -61,5 +74,9 @@ body {
 
     .card {
         margin: 10px;
+    }
+    .card-btn,
+    .card-back-btn {
+        bottom: 5px;
     }
 }
