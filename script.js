@@ -32,7 +32,7 @@ function renderCharacters(characters) {
     image.src = character.image;
     name.innerText = `${character.name}`;
     info.textContent = 'Character info';
-    back.innerText = `Status: ${character.status}\nSpecies: ${character.species}`;
+    back.innerText = `Origin: ${character.origin.name}\nSpecies: ${character.species}\nGender: ${character.gender}\nStatus: ${character.status}\n`;
     backInfo.textContent = 'Flip back';
 
     // Appends the values to the card front and back.
