@@ -15,12 +15,19 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+header {
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
 /* Styles for the container holding the cards */
 #cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    gap: 20px;
 }
 /* Styles for each individual card */
 .card {
@@ -28,6 +35,7 @@ body {
     display: grid;
     border: 1px solid black;
     margin: 15px;
+    padding: 5px;
     width: fit-content;
     background-color: var(--primary-bg-color);
     text-align: center;
@@ -41,6 +49,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    background: linear-gradient(135deg, var(--light-blue), var(--primary-bg-color));
     backface-visibility: hidden;    /* Hides the back of the card during the flip */
     background-color: var(--primary-bg-color);      /* BG color for the card back*/
     transform: rotateY(180deg);     /* Initial rotation to hide the back */
@@ -49,7 +58,7 @@ body {
 .card-btn,
 .card-back-btn {
     position: absolute;
-    bottom: 45px; /* Adjust this value to your preference */
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px;
@@ -58,7 +67,7 @@ body {
     border: none;
     cursor: pointer;
 }
-/* Styles for the card name, making it lighter in weight */
+/* Styles for the card name */
 .card-name {
     font-weight:lighter;
 }
