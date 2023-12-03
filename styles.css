@@ -85,69 +85,64 @@ header {
 .card.flipped {
     transform: rotateY(180deg);
 }
-/* Responsive styles */
-/* @media only screen and (min-width: 601px) and (max-width: 1200px) {
-    header {
-        padding: 15px;
-    }
-    #cards-container {
-        padding: 10px;
-        gap: 10px;
-    }
-    .card {
-        margin: 10px;
-    }
-    .card-btn,
-    .card-back-btn {
-        font-size: 14px;
-    }
-    .card-back {
-        padding: 30px;
-    }
-    .card-name {
+/* Responsive styles desktop */
+@media (min-width: 1024px) {
+    body {
         font-size: 16px;
     }
-} */
 
-@media only screen and (min-width: 401px) and (max-width: 600px) {
-    header {
-        padding: 12px;
-    }
     #cards-container {
-        padding: 10px;
-        gap: 10px;
+        padding: 40px;
     }
+
     .card {
-        margin: 10px;
+        margin: 20px;
+        padding: 10px;
     }
+
     .card-btn,
     .card-back-btn {
-        font-size: 14px;
-    }
-    .card-back {
-        padding: 30px;
-    }
-    .card-name {
-        font-size: 18px;
+        bottom: 85px;
     }
 }
+/* Responsive styles tablet */
+@media (max-width: 1023px) and (min-width: 768) {
+    body {
+        font-size: 14px;
+    }
 
-@media only screen and (max-width: 400px) {
-    header {
-        padding: 10px;
-    }
     #cards-container {
-        padding: 5px;
+        padding: 30px;
     }
+
     .card {
-        margin: 10px;
+        margin: 15px;
+        padding: 8px;
     }
+
     .card-btn,
     .card-back-btn {
-        font-size: 18px;
+        bottom: 75px;
     }
-    .card-back {
-        padding: 30px;
+}
+/* Responsive styles mobile */
+@media (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+
+    #cards-container {
+        padding: 20px;
+    }
+
+    .card {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .card-btn,
+    .card-back-btn {
+        bottom: 75px;
     }
     .card-name {
         font-size: 24px;
