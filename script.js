@@ -15,7 +15,7 @@ function renderCharacters(characters) {
     characters.forEach(character => {
         const div = document.createElement('div');
         const image = document.createElement('img');
-        const name = document.createElement('h3');
+        const name = document.createElement('h2');
         const info = document.createElement('button');
         const back = document.createElement('div');
         const backInfo = document.createElement('button');
@@ -32,7 +32,7 @@ function renderCharacters(characters) {
     image.src = character.image;
     name.innerText = `${character.name}`;
     info.textContent = 'Character info';
-    back.innerText = `Origin: ${character.origin.name}\nSpecies: ${character.species}\nGender: ${character.gender}\nStatus: ${character.status}\n`;
+    back.innerHTML = `<strong>Origin:</strong> ${character.origin.name}<br><strong>Species:</strong> ${character.species}<br><strong>Gender:</strong> ${character.gender}<br><strong>Status:</strong> ${character.status}\n`;
     backInfo.textContent = 'Flip back';
 
     // Appends the values to the card front and back.

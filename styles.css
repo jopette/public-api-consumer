@@ -46,25 +46,31 @@ header {
 /* Styles for the back of the card */
 .card-back {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 60px;
+    padding: 40px;
+    font-size: 18px;
     background: linear-gradient(135deg, var(--light-blue), var(--primary-bg-color));
     backface-visibility: hidden;    /* Hides the back of the card during the flip */
-    background-color: var(--primary-bg-color);      /* BG color for the card back*/
     transform: rotateY(180deg);     /* Initial rotation to hide the back */
 }
 /* Styles for the front and back buttons */
 .card-btn,
 .card-back-btn {
     position: absolute;
-    bottom: 50px;
+    bottom: 75px;
     left: 50%;
     transform: translateX(-50%);
     padding: 12px 20px;
+    font-size: 18px;
     background-color: var(--dark-blue);
+    border-radius: 5px;
     color: white;
     border: none;
     cursor: pointer;
@@ -75,36 +81,33 @@ header {
     background-color: var(--light-blue);
     color: var(--dark-blue);
 }
-/* Styles for the card name */
-.card-name {
-    font-weight:lighter;
-}
 /* Styles for a flipped card, triggering a rotation to reveal the back */
 .card.flipped {
     transform: rotateY(180deg);
 }
 /* Responsive styles */
-@media only screen and (min-width: 601px) and (max-width: 1200px) {
+/* @media only screen and (min-width: 601px) and (max-width: 1200px) {
     header {
         padding: 15px;
     }
     #cards-container {
-        padding: 15px;
+        padding: 10px;
+        gap: 10px;
     }
     .card {
-        margin: 15px;
+        margin: 10px;
     }
     .card-btn,
     .card-back-btn {
-        font-size: 16px;
+        font-size: 14px;
     }
     .card-back {
-        padding: 40px;
+        padding: 30px;
     }
     .card-name {
         font-size: 16px;
     }
-}
+} */
 
 @media only screen and (min-width: 401px) and (max-width: 600px) {
     header {
