@@ -139,9 +139,6 @@ header {
 
     .card-btn,
     .card-back-btn {
-        bottom: 75px;
-    }
-    .card-name {
-        font-size: 24px;
+        bottom: 65px;
     }
 }
