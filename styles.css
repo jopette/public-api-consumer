@@ -2,11 +2,6 @@
     --primary-bg-color: blanchedalmond;
     --light-blue: #BEE5FD;
     --dark-blue: #01B4C6;
-    --green: #97ce4c;
-    --dark-green: #15682a;
-    --pink: #F675DA;
-    --yellow: #FFF874;
-    --red: firebrick;
 }
 * {
     box-sizing: border-box;
@@ -33,6 +28,7 @@ header {
 .card {
     position: relative;
     display: grid;
+    border-radius: 5px;
     border: 1px solid black;
     margin: 15px;
     padding: 5px;
@@ -49,6 +45,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 5px;
     gap: 3px;
     top: 0;
     left: 0;
