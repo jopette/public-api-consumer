@@ -10,7 +10,7 @@ fetch('https://rickandmortyapi.com/api/character')
 const cardsContainer = document.querySelector('#cards-container');
 
 // Function renderCharacters (used in the api fetch above). It iterates through
-// the characters and places out tags for the elements below.
+// the characters and places out tags for the character elements.
 function renderCharacters(characters) {
     characters.forEach(character => {
         const div = document.createElement('div');
@@ -28,7 +28,7 @@ function renderCharacters(characters) {
     back.classList.add('card-back');
     backInfo.classList.add('card-back-btn');
 
-    // Puts values inside the tags. Three on the card front, two on the card back.
+    // Puts values inside the tags, for the card front and back.
     image.src = character.image;
     name.innerText = `${character.name}`;
     info.textContent = 'Character info';
@@ -41,7 +41,7 @@ function renderCharacters(characters) {
     div.appendChild(info);
     back.appendChild(backInfo);
     div.appendChild(back);
-    // Appends the entire card to cardsContainer.
+    // Appends the cards to cardsContainer.
     cardsContainer.appendChild(div);
 
     // Two event listeners (cards front and back) for toggle flipping the cards.
