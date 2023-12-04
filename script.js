@@ -1,17 +1,20 @@
 // Fetching the api characters
 async function fetchCharacters() {
     try {
-  const response = await fetch('https://rickandmortyapi.com/api/character')
-  const characters = await response.json();
+    const response = await fetch('https://rickandmortyapi.com/api/character')
+    const characters = await response.json();
     console.log(characters.results);
     renderCharacters(characters.results);
-      } catch (error) {
+    } catch (error) {
         console.error('Error fetching characters', error);
       }
   }
-  fetchCharacters();
+  // Create fetchButton variable and connect the HTML fetchCards id to it.
+  // Also added event listener to click and fetch the cards.
+  const fetchButton = document.querySelector('#fetchCards');
+  fetchButton.addEventListener('click', fetchCharacters);
 
-// Create cardsContainer variable and connect the HTML cards-container id to it
+// Create cardsContainer variable and connect the HTML cards-container id to it.
 const cardsContainer = document.querySelector('#cards-container');
 
 // Function renderCharacters (used in the api fetch above). It iterates through

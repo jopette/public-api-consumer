@@ -10,6 +10,20 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+/* */
+#fetchCards {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 30px;
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 /* Styles for the header */
 header {
     background-color: var(--dark-blue);
@@ -79,7 +93,8 @@ header {
 }
 /* Styles for buttons hover effect */
 .card-btn:hover,
-.card-back-btn:hover {
+.card-back-btn:hover,
+#fetchCards:hover {
     background-color: var(--light-blue);
     color: var(--dark-blue);
 }
@@ -126,6 +141,10 @@ header {
 /* Responsive styles mobile */
 @media (max-width: 767px) {
     body {
+        font-size: 12px;
+    }
+
+    #fetchCards {
         font-size: 12px;
     }
 
