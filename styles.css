@@ -103,7 +103,7 @@ header {
     }
 }
 /* Responsive styles tablet */
-@media (max-width: 1023px) and (min-width: 768) {
+@media (min-width: 768) and (max-width: 1023px) {
     body {
         font-size: 14px;
     }
